@@ -13,11 +13,11 @@
         </thead>
         <tbody>
         <tr v-for="noticia in noticias">
-            <td>{{noticia.id_noticia}}</td>
+            <td>{{noticia.id}}</td>
             <td>{{noticia.ds_texto}}</td>
-            <td class="text-center">{{noticia.dt_cadastro | formatDate}}</td>
+            <td class="text-center">{{noticia.dt_noticia | formatDate}}</td>
             <td class="text-center">{{noticia.fl_oculta}}</td>
-            <td class="text-center">{{noticia.dt_cadastro | formatDate}}</td>
+            <td class="text-center">{{noticia.dt_noticia | formatDate}}</td>
             <td>
                 editar
             </td>
@@ -48,9 +48,9 @@
             formatDate(value) {
                 // return valor.replace('-', '/').replace('-', '/');
                 if(value){
-                    console.log(value);
-                    return moment(value, "DD/MM/YYYY").format('DD/MM/YYYY');
-                    // return moment(value, 'DD/MM/YYYY');
+                    // console.log(value);
+                    return moment(value, 'MM/DD/YYYY').format('DD/MM/YYYY');
+                    // return moment(value, 'DD/MM/YYYY').format();
                 }
             }
         }

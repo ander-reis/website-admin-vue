@@ -41,7 +41,7 @@ class Noticias extends Model implements Transformable
 
     const UPDATED_AT = 'dt_alteracao';
 
-    //protected $hidden = ['dt_alteracao', 'dt_expira'];
+    protected $hidden = ['created_at', 'updated_at'];
 
     /**
      * The attributes that are mass assignable.
@@ -49,6 +49,7 @@ class Noticias extends Model implements Transformable
      * @var array
      */
     protected $fillable = [
+        'id_noticia',
         'id_categoria',
         'dt_cadastro',
         'dt_expira',
@@ -65,15 +66,15 @@ class Noticias extends Model implements Transformable
      *
      * @var array
      */
-//    protected $dates = ['dt_cadastro', 'dt_noticia'];
+    protected $dates = ['dt_noticia'];
 
 
-//    public function toArray()
-//    {
-        //$data = parent::toArray();
-        //$data['dt_cadastro'] = (new \DateTime($this->dt_cadastro))->format('m-d-Y');
-        //$data['dt_noticia'] = (new \DateTime($this->dt_noticia))->format('m-d-Y');
-        //return $data;
-//    }
+    public function toArray()
+    {
+        $data = parent::toArray();
+//        $data['dt_cadastro'] = (new \DateTime($this->dt_cadastro))->format('m-d-Y');
+        $data['dt_noticia'] = (new \DateTime($this->dt_noticia))->format('m-d-Y');
+        return $data;
+    }
 
 }
