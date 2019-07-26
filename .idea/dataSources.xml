@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="PostgreSQL - sinprosp_website@localhost" uuid="c0f8a63e-21cd-4178-a0a7-47efa4609152">
-      <driver-ref>postgresql</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/sinprosp_website</jdbc-url>
-    </data-source>
     <data-source source="LOCAL" name="SINPRO@192.168.13.11" uuid="781d5831-eaf1-4ab5-9dc9-5d9e7613a7ff">
       <driver-ref>sqlserver.ms</driver-ref>
       <synchronize>true</synchronize>
@@ -24,6 +18,12 @@
       <driver-properties>
         <property name="applicationName" value="DataGrip" />
       </driver-properties>
+    </data-source>
+    <data-source source="LOCAL" name="sinprosp_website@localhost" uuid="f25999bd-79b5-4188-8b33-8108545e9233">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/sinprosp_website</jdbc-url>
     </data-source>
   </component>
 </project>

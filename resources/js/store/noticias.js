@@ -1,4 +1,3 @@
-import 'vue-resource';
 import Vue from 'vue';
 import ADMIN_CONFIG from '../services/admin.config';
 

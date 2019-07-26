@@ -41,7 +41,10 @@ ApiRoute::version('v1', function(){
             });
 
             // rota noticias
-            ApiRoute::resource('/noticias', 'NoticiasController', ['only' => ['index']]);
+            ApiRoute::resource('/noticias', 'Noticias\NoticiasController', ['only' => ['index']]);
+
+            // rota noticias categorias
+            ApiRoute::resource('/noticias-categorias', 'Noticias\NoticiasCategoriasController', ['only' => ['index', 'store', 'show', 'update']]);
         });
     });
 });

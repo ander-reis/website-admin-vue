@@ -11,13 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.admin');
-})->name('app');
+Route::get('/{any}', 'Admin\SinglePageController@index')->where('any', '.*');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Route::get('/noticias', 'Admin\NoticiasController@index');
-Route::get('/noticias-teste', 'Admin\NoticiasController@index')->name('noticia-teste');
+//Route::get('/', function () {
+//    return view('layouts.admin');
+//})->name('app');
